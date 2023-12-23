@@ -1,0 +1,946 @@
+<style>
+    /* remove this */
+    .dna-genetic-screening {
+        background: #dfdddd;
+        padding: 0;
+    }
+
+    @media (min-width: 768px) {
+        .dna-genetic-screening {
+            background: #dfdddd;
+        }
+    }
+
+    .dna-genetic-screening p,
+    .dna-genetic-screening h1,
+    .dna-genetic-screening h2,
+    .dna-genetic-screening h3,
+    .dna-genetic-screening h4,
+    .dna-genetic-screening h5,
+    .dna-genetic-screening h6 {
+        padding: 0;
+        margin: 0;
+        line-height: 1;
+    }
+
+    /* Utility classes */
+    .dna-genetic-screening .text-center {
+        text-align: center;
+    }
+
+    .dna-genetic-screening .heading {
+        font-size: 3.6rem;
+        color: black;
+    }
+
+    .dna-genetic-screening .subheading {
+        font-size: 2.4rem;
+        color: #ad7b32;
+    }
+
+    .dna-genetic-screening .body-text {
+        font-weight: normal;
+        font-size: 1.8rem;
+    }
+
+    .dna-genetic-screening .escape-container {
+        width: calc(100vw - 16px);
+        position: relative;
+        left: calc(50% + 7px);
+        right: 50%;
+        margin: 0 -50vw;
+    }
+
+    .dna-genetic-screening .blank-bg {
+        background-color: #ffffff;
+    }
+
+    .dna-genetic-screening .box-shadow {
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+            0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    .dna-genetic-screening .round {
+        border-radius: 50%;
+    }
+
+    .dna-genetic-screening img {
+        object-fit: contain;
+    }
+
+    .dna-genetic-screening .cta-btn {
+        width: fit-content;
+        padding: 1rem;
+        display: inline-block;
+        color: #ffffff;
+        border: 0;
+        background: #ad7b32;
+        font-size: 2.4rem;
+        text-decoration: none;
+        border-radius: 2rem;
+    }
+
+    .dna-genetic-screening .hero .content,
+    .dna-genetic-screening .cta .content {
+        display: flex;
+    }
+
+    .dna-genetic-screening .hero .content {
+        position: relative;
+        background-image: url("https://cdn.store-assets.com/s/1275775/f/12291175.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 40rem;
+    }
+
+    .dna-genetic-screening .hero .hero-text {
+        background-image: linear-gradient(to right, #000000cc, #00000055);
+        padding-inline: 2rem;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .dna-genetic-screening .hero .heading,
+    .dna-genetic-screening .cta .heading {
+        color: #ffffff;
+    }
+
+    .dna-genetic-screening .hero .hero-text,
+    .dna-genetic-screening .cta .cta-text {
+        align-self: center;
+    }
+
+    .dna-genetic-screening .hero .subheading {
+        margin-top: 1.2rem;
+        color: #ffbf5c;
+    }
+
+    .dna-genetic-screening .hero img {
+        display: none;
+    }
+
+    .dna-genetic-screening .hero .cta-btn,
+    .dna-genetic-screening .cta .cta-btn {
+        margin-block-start: 2rem;
+    }
+
+    .dna-genetic-screening #intro iframe {
+        border-radius: 2rem;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-inline: auto;
+        margin-block: 4rem;
+        aspect-ratio: 4 / 3;
+    }
+
+    .dna-genetic-screening #intro p {
+        font-size: 2.4rem;
+        font-weight: normal;
+        color: #ad7b32;
+    }
+
+    .dna-genetic-screening #intro,
+    .dna-genetic-screening #therapy-benefits,
+    .dna-genetic-screening #therapy-faqs,
+    .dna-genetic-screening #therapy-testimonials {
+        padding: 4rem;
+    }
+
+    .dna-genetic-screening .benefits {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+    }
+
+    .dna-genetic-screening .benefit {
+        width: calc(100% - 2rem);
+        padding: 1rem;
+    }
+
+    .dna-genetic-screening .benefit > img {
+        display: block;
+        margin-inline: auto;
+        width: 100%;
+        height: 10rem;
+    }
+
+    .dna-genetic-screening .benefit h3 {
+        font-size: 3rem;
+        margin-block-start: 2.5rem;
+    }
+
+    .dna-genetic-screening .benefit .body-text {
+        margin-block-start: 2rem;
+    }
+
+    .dna-genetic-screening .cta .content {
+        position: relative;
+        background-image: url("https://cdn.store-assets.com/s/1275775/f/12213157.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 40rem;
+    }
+
+    .dna-genetic-screening .cta .content img {
+        display: none;
+    }
+
+    .dna-genetic-screening .cta .cta-text {
+        background-image: linear-gradient(to right, #000000cc, #00000055);
+        padding-inline: 2rem;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .dna-genetic-screening .cta .cta-text .subheading {
+        font-weight: 600;
+        margin-block-start: 2rem;
+        color: #ffbf5c;
+    }
+
+    .dna-genetic-screening .cta .cta-text .body-text {
+        display: none;
+    }
+
+    .dna-genetic-screening #therapy-testimonials .subheading,
+    .dna-genetic-screening #therapy-faqs .subheading {
+        margin-block-start: 2rem;
+    }
+
+    .dna-genetic-screening .testimonials {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+    }
+
+    .dna-genetic-screening .testimonial {
+        width: calc(100% - 5rem);
+        margin: 1.25rem;
+        padding: 1.25rem;
+        border-radius: 5rem;
+    }
+
+    .dna-genetic-screening .testimonial > div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dna-genetic-screening .testimonial .testimonial-img-container {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+    }
+
+    .dna-genetic-screening .testimonial img {
+        width: 20rem;
+        height: 20rem;
+        aspect-ratio: 1 / 1;
+    }
+
+    .dna-genetic-screening .testimonial .stars {
+        margin-top: 1.7rem;
+    }
+
+    .dna-genetic-screening .testimonial .testimonial-text {
+        font-size: 2.4rem;
+        font-style: italic;
+        margin-top: 1.5rem;
+    }
+
+    .dna-genetic-screening .testimonial .author {
+        color: #ad7b32;
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin-top: 2.2rem;
+    }
+
+    .dna-genetic-screening .faqs {
+        padding-block: 1.5rem;
+    }
+
+    .dna-genetic-screening .faq {
+        margin-block-start: 3rem;
+    }
+
+    .dna-genetic-screening .faq .question {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #ad7b32;
+    }
+
+    .dna-genetic-screening .faq .body-text {
+        margin-block-start: 1.2rem;
+    }
+
+    .dna-genetic-screening #final-cta {
+        padding-block: 4rem;
+    }
+
+    .dna-genetic-screening #final-cta .heading {
+        width: 75%;
+        margin-inline: auto;
+    }
+
+    .dna-genetic-screening #final-cta .content {
+        background: #ffffff;
+        width: 75%;
+        margin-inline: auto;
+        margin-block-start: 5rem;
+        border-radius: 3rem;
+    }
+
+    .dna-genetic-screening #final-cta a {
+        text-decoration: none;
+        color: initial;
+        padding-block: 2rem;
+        display: block;
+    }
+
+    .dna-genetic-screening #final-cta .content img {
+        display: block;
+        width: 75%;
+        height: auto;
+        margin: auto;
+    }
+
+    .dna-genetic-screening #final-cta .content .subheading {
+        margin-block-start: 2rem;
+        margin-block-end: 1rem;
+    }
+
+    .dna-genetic-screening #final-cta .content .body-text {
+        width: 75%;
+        margin: auto;
+    }
+
+    @media (min-width: 768px) {
+        .dna-genetic-screening .heading {
+            font-size: 4.8rem;
+        }
+
+        .dna-genetic-screening .subheading {
+            font-size: 3.6rem;
+        }
+
+        .dna-genetic-screening .body-text {
+            font-size: 2.4rem;
+        }
+
+        .dna-genetic-screening .cta-btn {
+            padding: 1.5rem 3rem;
+        }
+
+        .dna-genetic-screening #therapy-testimonials {
+            padding: 8rem 3rem;
+        }
+
+        .dna-genetic-screening .hero .content,
+        .dna-genetic-screening .cta .content {
+            background-position: center;
+            background-size: contain;
+        }
+
+        .dna-genetic-screening #intro iframe {
+            width: 80%;
+            height: 40rem;
+        }
+
+        .dna-genetic-screening #intro p {
+            font-size: 3.2rem;
+        }
+
+        .dna-genetic-screening .benefit {
+            width: calc(50% - 2rem);
+            padding: 1rem;
+        }
+
+        .dna-genetic-screening .benefit h3 {
+            font-size: 2.75rem;
+        }
+
+        .dna-genetic-screening .cta .content img {
+            width: 60rem;
+        }
+
+        .dna-genetic-screening .testimonial {
+            width: calc(33% - 5rem);
+        }
+
+        .dna-genetic-screening .testimonial .testimonial-img-container {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        .dna-genetic-screening .testimonial img {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        .dna-genetic-screening .faq .question {
+            font-size: 3.6rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .dna-genetic-screening #intro,
+        .dna-genetic-screening #therapy-benefits,
+        .dna-genetic-screening #therapy-faqs {
+            padding: 8rem 20rem;
+        }
+
+        .dna-genetic-screening #therapy-testimonials {
+            padding: 8rem 10rem;
+        }
+
+        .dna-genetic-screening .benefit {
+            width: calc(25% - 2rem);
+            padding: 1rem;
+        }
+
+        .dna-genetic-screening .hero .content,
+        .dna-genetic-screening .cta .content {
+            position: relative;
+            background: none;
+        }
+
+        .dna-genetic-screening .hero .hero-text,
+        .dna-genetic-screening .cta .cta-text {
+            background: none;
+            position: static;
+        }
+
+        .dna-genetic-screening .hero .heading,
+        .dna-genetic-screening .cta .heading {
+            color: #000000;
+        }
+
+        .dna-genetic-screening .hero .hero-text .subheading,
+        .dna-genetic-screening .cta .cta-text .subheading {
+            color: #ad7b32;
+        }
+
+        .dna-genetic-screening .hero .content img {
+            display: block;
+            position: static;
+            width: 50%;
+            height: auto;
+        }
+
+        .dna-genetic-screening .cta .content img {
+            display: block;
+            width: 50%;
+            height: auto;
+        }
+
+        .dna-genetic-screening .cta .cta-text .body-text {
+            display: block;
+            margin-block-start: 2rem;
+        }
+
+        .dna-genetic-screening #final-cta .content {
+            width: 50%;
+        }
+    }
+</style>
+
+<head>
+    <link rel="stylesheet" href="styles/easystore.css" />
+</head>
+
+<body>
+    <div class="dna-genetic-screening">
+        <div class="hero">
+            <div class="content">
+                <div class="hero-text">
+                    <h1 class="heading">
+                        Explore Your DNA for a Healthier You
+                    </h1>
+                    <p class="subheading">Dive in and discover more below</p>
+                    <a
+                        href="/apps/contact-form-plus"
+                        class="cta-btn box-shadow"
+                    >
+                        Get a free consultation
+                    </a>
+                </div>
+                <img
+                    src="https://cdn.store-assets.com/s/1275775/f/12291175.png"
+                />
+            </div>
+        </div>
+
+        <div class="escape-container blank-bg">
+            <div id="intro">
+                <h2 class="heading text-center">
+                    What is DNA Genertic Screening? Health Empowerment
+                </h2>
+                <iframe
+                    width="1519"
+                    height="526"
+                    src="https://www.youtube.com/embed/oEBR8X5JvDE"
+                    title="DNA Test in Malaysia | Most Accurate &amp; Complete Health Report"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                ></iframe>
+                <p class="text-center">
+                    Discover the hidden insights in your DNA. Our Genetic
+                    Screening empowers you with personalized health knowledge.
+                    Witness our commitment to accuracy, privacy, and quality.
+                    Take control of your well-being —— watch now!
+                </p>
+            </div>
+        </div>
+
+        <div class="escape-container blank-bg">
+            <div id="therapy-benefits">
+                <h2 class="heading text-center">
+                    Benefits of DNA Genetic Screening
+                </h2>
+                <div class="benefits">
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12291027.svg"
+                        />
+                        <div class="text-center">
+                            <h3>Early Detection</h3>
+                            <p class="body-text">Catch health issues early</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12291024.svg"
+                        />
+                        <div class="text-center">
+                            <h3>Personalized Guidance</h3>
+                            <p class="body-text">
+                                Tailored advice for a healthier life
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12291026.svg"
+                        />
+                        <div class="text-center">
+                            <h3>Smart Health Choices</h3>
+                            <p class="body-text">
+                                Make informed choices about your health
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12291028.svg"
+                        />
+                        <div class="text-center">
+                            <h3>Wellness Optimization</h3>
+                            <p class="body-text">
+                                Understand your body better for a healthier you
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12291025.svg"
+                        />
+                        <div class="text-center">
+                            <h3>Medication Guidance</h3>
+                            <p class="body-text">
+                                Learn how your genes affect medication
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12291030.svg"
+                        />
+                        <div class="text-center">
+                            <h3>Family Health Insights</h3>
+                            <p class="body-text">
+                                Know your family's health for better insight
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12291029.svg"
+                        />
+                        <div class="text-center">
+                            <h3>Safer Medication</h3>
+                            <p class="body-text">
+                                Reduce side effects with personalized insights
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12291031.svg"
+                        />
+                        <div class="text-center">
+                            <h3>Empowered Health</h3>
+                            <p class="body-text">
+                                Take control with valuable knowledge
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <div class="content">
+                <img
+                    src="https://cdn.store-assets.com/s/1275775/f/12291433.png"
+                />
+                <div class="cta-text">
+                    <h2 class="heading">
+                        Ready to Experience the Benefits for Yourself
+                    </h2>
+                    <p class="subheading">Book Your Free Consultation Now!</p>
+                    <p class="body-text">
+                        Our team is eager to guide you on your journey to
+                        renewed vitality and well-being.
+                    </p>
+                    <a
+                        href="/apps/contact-form-plus"
+                        class="cta-btn box-shadow"
+                    >
+                        BOOK NOW
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="escape-container blank-bg">
+            <div id="therapy-testimonials" class="text-center">
+                <h2 class="heading">Testimonials</h2>
+                <p class="subheading">What other people are saying</p>
+                <div class="testimonials">
+                    <div class="testimonial box-shadow">
+                        <div>
+                            <div
+                                class="testimonial-img-container round box-shadow"
+                            >
+                                <img
+                                    src="https://cdn.store-assets.com/s/1275775/f/12291021.png"
+                                    class="round"
+                                />
+                            </div>
+                            <div class="stars">
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                            </div>
+                            <p class="testimonial-text">
+                                Revive Wellness's DNA screening transformed how
+                                I see my health. Personalized insights, easy
+                                process—game-changer!
+                            </p>
+                            <p class="author">John</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial box-shadow">
+                        <div>
+                            <div
+                                class="testimonial-img-container round box-shadow"
+                            >
+                                <img
+                                    src="https://cdn.store-assets.com/s/1275775/f/12291020.png"
+                                    class="round"
+                                />
+                            </div>
+                            <div class="stars">
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                            </div>
+                            <p class="testimonial-text">
+                                Revive Wellness gave me peace about my heart
+                                health. Clear results, expert guidance—now I'm
+                                in control.
+                            </p>
+                            <p class="author">Yuzie</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial box-shadow">
+                        <div>
+                            <div
+                                class="testimonial-img-container round box-shadow"
+                            >
+                                <img
+                                    src="https://cdn.store-assets.com/s/1275775/f/12291018.png"
+                                    class="round"
+                                />
+                            </div>
+                            <div class="stars">
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                            </div>
+                            <p class="testimonial-text">
+                                Revive Wellness made understanding my genetics
+                                simple. Insights on risks and
+                                strengths—life-changing!
+                            </p>
+                            <p class="author">Mike</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="escape-container blank-bg">
+            <div id="therapy-faqs">
+                <h2 class="heading text-center">Frequently Asked Questions</h2>
+                <p class="subheading text-center">
+                    Questions about Genetic DNA Screening
+                </p>
+
+                <div class="faqs">
+                    <div class="faq">
+                        <h3 class="question">What is genetic DNA screening?</h3>
+                        <p class="body-text">
+                            DNA Genetic Screening is a quick, non-invasive
+                            analysis of your DNA that reveals insights into your
+                            health risks, strengths, and personalized
+                            recommendations.
+                        </p>
+                    </div>
+
+                    <div class="faq">
+                        <h3 class="question">
+                            Is my genetic data confidential?
+                        </h3>
+                        <p class="body-text">
+                            Absolutely, your data is handled with strict privacy
+                            standards.
+                        </p>
+                    </div>
+
+                    <div class="faq">
+                        <h3 class="question">Can it predict all diseases?</h3>
+                        <p class="body-text">
+                            It focuses on known genetic markers; consult
+                            healthcare professionals for a holistic view.
+                        </p>
+                    </div>
+
+                    <div class="faq">
+                        <h3 class="question">
+                            How does it benefit healthy individuals?
+                        </h3>
+                        <p class="body-text">
+                            Reveals genetic strengths and vulnerabilities for
+                            informed lifestyle choices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="final-cta">
+            <h2 class="heading text-center">
+                Have more questions or ready to begin your journey?
+            </h2>
+            <div class="content box-shadow text-center">
+                <a href="/apps/contact-form-plus">
+                    <img
+                        src="https://cdn.store-assets.com/s/1275775/f/12213135.png"
+                    />
+                    <p class="subheading">Book Your Free Consultation Today!</p>
+                    <p class="body-text">
+                        Whether you seek answers or are ready to embark on your
+                        exosome therapy journey, our team is here to assist you.
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>

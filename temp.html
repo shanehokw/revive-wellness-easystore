@@ -1,0 +1,909 @@
+<style>
+    .exosome-therapy p,
+    .exosome-therapy h1,
+    .exosome-therapy h2,
+    .exosome-therapy h3,
+    .exosome-therapy h4,
+    .exosome-therapy h5,
+    .exosome-therapy h6 {
+        padding: 0;
+        margin: 0;
+        line-height: 1;
+    }
+
+    /* Utility classes */
+    .exosome-therapy .text-center {
+        text-align: center;
+    }
+
+    .exosome-therapy .heading {
+        font-size: 3.6rem;
+        color: black;
+    }
+
+    .exosome-therapy .subheading {
+        font-size: 2.4rem;
+        color: #ad7b32;
+    }
+
+    .exosome-therapy .body-text {
+        font-weight: normal;
+        font-size: 1.8rem;
+    }
+
+    .exosome-therapy .escape-container {
+        width: calc(100vw - 16px);
+        position: relative;
+        left: calc(50% + 7px);
+        right: 50%;
+        margin: 0 -50vw;
+    }
+
+    .exosome-therapy .blank-bg {
+        background-color: #ffffff;
+    }
+
+    .exosome-therapy .box-shadow {
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+            0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    .exosome-therapy .round {
+        border-radius: 50%;
+    }
+
+    .exosome-therapy img {
+        object-fit: contain;
+    }
+
+    .exosome-therapy .cta-btn {
+        width: fit-content;
+        padding: 1rem;
+        display: inline-block;
+        color: #ffffff;
+        border: 0;
+        background: #ad7b32;
+        font-size: 2.4rem;
+        text-decoration: none;
+        border-radius: 2rem;
+    }
+
+    .exosome-therapy .hero .content,
+    .exosome-therapy .cta .content {
+        display: flex;
+    }
+
+    .exosome-therapy .hero .content {
+        position: relative;
+        background-image: url("https://cdn.store-assets.com/s/1275775/f/12156811.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 40rem;
+    }
+
+    .exosome-therapy .hero .hero-text {
+        background-image: linear-gradient(to right, #000000cc, #00000055);
+        padding-inline: 2rem;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .exosome-therapy .hero .heading,
+    .exosome-therapy .cta .heading {
+        color: #ffffff;
+    }
+
+    .exosome-therapy .hero .hero-text,
+    .exosome-therapy .cta .cta-text {
+        align-self: center;
+    }
+
+    .exosome-therapy .hero .subheading {
+        margin-top: 1.2rem;
+        color: #ffbf5c;
+    }
+
+    .exosome-therapy .hero img {
+        display: none;
+    }
+
+    .exosome-therapy .hero .cta-btn,
+    .exosome-therapy .cta .cta-btn {
+        margin-block-start: 2rem;
+    }
+
+    .exosome-therapy #intro iframe {
+        border-radius: 2rem;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-inline: auto;
+        margin-block: 4rem;
+        aspect-ratio: 4 / 3;
+    }
+
+    .exosome-therapy #intro p {
+        font-size: 2.4rem;
+        font-weight: normal;
+        color: #ad7b32;
+    }
+
+    .exosome-therapy #intro,
+    .exosome-therapy #therapy-benefits,
+    .exosome-therapy #therapy-faqs,
+    .exosome-therapy #therapy-testimonials {
+        padding: 4rem;
+    }
+
+    .exosome-therapy .benefits {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+    }
+
+    .exosome-therapy .benefit {
+        width: calc(100% - 2rem);
+        padding: 1rem;
+    }
+
+    .exosome-therapy .benefit > img {
+        display: block;
+        margin-inline: auto;
+        width: 100%;
+        height: 10rem;
+    }
+
+    .exosome-therapy .benefit h3 {
+        font-size: 3rem;
+        margin-block-start: 2.5rem;
+    }
+
+    .exosome-therapy .benefit .body-text {
+        margin-block-start: 2rem;
+    }
+
+    .exosome-therapy .cta .content {
+        position: relative;
+        background-image: url("https://cdn.store-assets.com/s/1275775/f/12213157.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 40rem;
+    }
+
+    .exosome-therapy .cta .content img {
+        display: none;
+    }
+
+    .exosome-therapy .cta .cta-text {
+        background-image: linear-gradient(to right, #000000cc, #00000055);
+        padding-inline: 2rem;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .exosome-therapy .cta .cta-text .subheading {
+        font-weight: 600;
+        margin-block-start: 2rem;
+        color: #ffbf5c;
+    }
+
+    .exosome-therapy .cta .cta-text .body-text {
+        display: none;
+    }
+
+    .exosome-therapy #therapy-testimonials .subheading,
+    .exosome-therapy #therapy-faqs .subheading {
+        margin-block-start: 2rem;
+    }
+
+    .exosome-therapy .testimonials {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+    }
+
+    .exosome-therapy .testimonial {
+        width: calc(100% - 5rem);
+        margin: 1.25rem;
+        padding: 1.25rem;
+        border-radius: 5rem;
+    }
+
+    .exosome-therapy .testimonial > div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .exosome-therapy .testimonial .testimonial-img-container {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+    }
+
+    .exosome-therapy .testimonial img {
+        width: 20rem;
+        height: 20rem;
+        aspect-ratio: 1 / 1;
+    }
+
+    .exosome-therapy .testimonial .stars {
+        margin-top: 1.7rem;
+    }
+
+    .exosome-therapy .testimonial .testimonial-text {
+        font-size: 2.4rem;
+        font-style: italic;
+        margin-top: 1.5rem;
+    }
+
+    .exosome-therapy .testimonial .author {
+        color: #ad7b32;
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin-top: 2.2rem;
+    }
+
+    .exosome-therapy .faqs {
+        padding-block: 1.5rem;
+    }
+
+    .exosome-therapy .faq {
+        margin-block-start: 3rem;
+    }
+
+    .exosome-therapy .faq .question {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #ad7b32;
+    }
+
+    .exosome-therapy .faq .body-text {
+        margin-block-start: 1.2rem;
+    }
+
+    .exosome-therapy #final-cta {
+        padding-block: 4rem;
+    }
+
+    .exosome-therapy #final-cta .heading {
+        width: 75%;
+        margin-inline: auto;
+    }
+
+    .exosome-therapy #final-cta .content {
+        background: #ffffff;
+        width: 75%;
+        margin-inline: auto;
+        margin-block-start: 5rem;
+        border-radius: 3rem;
+    }
+
+    .exosome-therapy #final-cta a {
+        text-decoration: none;
+        color: initial;
+        padding-block: 2rem;
+        display: block;
+    }
+
+    .exosome-therapy #final-cta .content img {
+        display: block;
+        width: 75%;
+        height: auto;
+        margin: auto;
+    }
+
+    .exosome-therapy #final-cta .content .subheading {
+        margin-block-start: 2rem;
+        margin-block-end: 1rem;
+    }
+
+    .exosome-therapy #final-cta .content .body-text {
+        width: 75%;
+        margin: auto;
+    }
+
+    @media (min-width: 768px) {
+        .exosome-therapy .heading {
+            font-size: 4.8rem;
+        }
+
+        .exosome-therapy .subheading {
+            font-size: 3.6rem;
+        }
+
+        .exosome-therapy .body-text {
+            font-size: 2.4rem;
+        }
+
+        .exosome-therapy .cta-btn {
+            padding: 1.5rem 3rem;
+        }
+
+        .exosome-therapy #therapy-testimonials {
+            padding: 8rem 3rem;
+        }
+
+        .exosome-therapy .hero .content,
+        .exosome-therapy .cta .content {
+            background-position: center;
+            background-size: contain;
+        }
+
+        .exosome-therapy #intro iframe {
+            width: 80%;
+            height: 40rem;
+        }
+
+        .exosome-therapy #intro p {
+            font-size: 3.2rem;
+        }
+
+        .exosome-therapy .benefit {
+            width: calc(50% - 2rem);
+            padding: 1rem;
+        }
+
+        .exosome-therapy .benefit h3 {
+            font-size: 2.75rem;
+        }
+
+        .exosome-therapy .cta .content img {
+            width: 60rem;
+        }
+
+        .exosome-therapy .testimonial {
+            width: calc(33% - 5rem);
+        }
+
+        .exosome-therapy .testimonial .testimonial-img-container {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        .exosome-therapy .testimonial img {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        .exosome-therapy .faq .question {
+            font-size: 3.6rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .exosome-therapy #intro,
+        .exosome-therapy #therapy-benefits,
+        .exosome-therapy #therapy-faqs {
+            padding: 8rem 20rem;
+        }
+
+        .exosome-therapy #therapy-testimonials {
+            padding: 8rem 10rem;
+        }
+
+        .exosome-therapy .benefit {
+            width: calc(25% - 2rem);
+            padding: 1rem;
+        }
+
+        .exosome-therapy .hero .content,
+        .exosome-therapy .cta .content {
+            position: relative;
+            background: none;
+        }
+
+        .exosome-therapy .hero .hero-text,
+        .exosome-therapy .cta .cta-text {
+            background: none;
+            position: static;
+        }
+
+        .exosome-therapy .hero .heading,
+        .exosome-therapy .cta .heading {
+            color: #000000;
+        }
+
+        .exosome-therapy .hero .hero-text .subheading,
+        .exosome-therapy .cta .cta-text .subheading {
+            color: #ad7b32;
+        }
+
+        .exosome-therapy .hero .content img {
+            display: block;
+            position: static;
+            width: 50%;
+            height: auto;
+        }
+
+        .exosome-therapy .cta .content img {
+            display: block;
+            width: 50%;
+            height: auto;
+        }
+
+        .exosome-therapy .cta .cta-text .body-text {
+            display: block;
+            margin-block-start: 2rem;
+        }
+
+        .exosome-therapy #final-cta .content {
+            width: 50%;
+        }
+    }
+</style>
+
+<div class="exosome-therapy">
+    <div class="hero">
+        <div class="content">
+            <div class="hero-text">
+                <h1 class="heading">
+                    Unlock Your Body's Rejuvenation Potential with Exosome
+                    Therapy
+                </h1>
+                <p class="subheading">Dive in and discover more below</p>
+                <a href="/apps/contact-form-plus" class="cta-btn box-shadow">
+                    Get a free consultation
+                </a>
+            </div>
+            <img src="https://cdn.store-assets.com/s/1275775/f/12156811.png" />
+        </div>
+    </div>
+
+    <div class="escape-container blank-bg">
+        <div id="intro">
+            <h2 class="heading text-center">
+                What is Exosome Therapy? Discover the Future of Health and
+                Beauty
+            </h2>
+            <iframe
+                width="1519"
+                height="526"
+                src="https://www.youtube.com/embed/NMtw8HjomOk"
+                title="Exosome Therapy in Malaysia | Your Perfect Skin Starts Here"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+            ></iframe>
+            <p class="text-center">
+                Explore the rejuvenating world of exosome therapy. Uncover how
+                it enhances beauty and well-being. Join us for an enlightening
+                journey.
+            </p>
+        </div>
+    </div>
+
+    <div class="escape-container blank-bg">
+        <div id="therapy-benefits">
+            <h2 class="heading text-center">Benefits of Exosome Therapy</h2>
+            <div class="benefits">
+                <div class="benefit">
+                    <img
+                        src="https://cdn.store-assets.com/s/1275775/f/12212975.png"
+                    />
+                    <div class="text-center">
+                        <h3>Cellular Renewal</h3>
+                        <p class="body-text">
+                            Stimulate healing and rejuvenation
+                        </p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <img
+                        src="https://cdn.store-assets.com/s/1275775/f/12212977.png"
+                    />
+                    <div class="text-center">
+                        <h3>Youthful Skin</h3>
+                        <p class="body-text">
+                            Reduce fine lines and enhance skin health
+                        </p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <img
+                        src="https://cdn.store-assets.com/s/1275775/f/12212979.png"
+                    />
+                    <div class="text-center">
+                        <h3>Hair Growth Support</h3>
+                        <p class="body-text">Thicker, healthier hair</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <img
+                        src="https://cdn.store-assets.com/s/1275775/f/12212978.png"
+                    />
+                    <div class="text-center">
+                        <h3>Anti-Inflammation</h3>
+                        <p class="body-text">Decrease inflammation</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <img
+                        src="https://cdn.store-assets.com/s/1275775/f/12212974.png"
+                    />
+                    <div class="text-center">
+                        <h3>Balanced Immunity</h3>
+                        <p class="body-text">Modulate your immune response</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <img
+                        src="https://cdn.store-assets.com/s/1275775/f/12212973.png"
+                    />
+                    <div class="text-center">
+                        <h3>Enhanced Beauty</h3>
+                        <p class="body-text">Promote collagen production</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <img
+                        src="https://cdn.store-assets.com/s/1275775/f/12212980.png"
+                    />
+                    <div class="text-center">
+                        <h3>Targeted Results</h3>
+                        <p class="body-text">
+                            Focus on specific treatment areas
+                        </p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <img
+                        src="https://cdn.store-assets.com/s/1275775/f/12212976.png"
+                    />
+                    <div class="text-center">
+                        <h3>Overall Well-Being</h3>
+                        <p class="body-text">
+                            Embrace holistic health and vitality
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta">
+        <div class="content">
+            <img src="https://cdn.store-assets.com/s/1275775/f/12213157.png" />
+            <div class="cta-text">
+                <h2 class="heading">
+                    Ready to Experience the Benefits for Yourself
+                </h2>
+                <p class="subheading">Book Your Free Consultation Now!</p>
+                <p class="body-text">
+                    Our team is eager to guide you on your journey to renewed
+                    vitality and well-being.
+                </p>
+                <a href="/apps/contact-form-plus" class="cta-btn box-shadow">
+                    BOOK NOW
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="escape-container blank-bg">
+        <div id="therapy-testimonials" class="text-center">
+            <h2 class="heading">Testimonials</h2>
+            <p class="subheading">What other people are saying</p>
+            <div class="testimonials">
+                <div class="testimonial box-shadow">
+                    <div>
+                        <div class="testimonial-img-container round box-shadow">
+                            <img
+                                src="https://cdn.store-assets.com/s/1275775/f/12221739.png"
+                                class="round"
+                            />
+                        </div>
+                        <div class="stars">
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">
+                            My skin feels years younger, and my hair has never
+                            looked better. The team at Revive Wellness is
+                            dedicated to your well-being.
+                        </p>
+                        <p class="author">Irene</p>
+                    </div>
+                </div>
+
+                <div class="testimonial box-shadow">
+                    <div>
+                        <div class="testimonial-img-container round box-shadow">
+                            <img
+                                src="https://cdn.store-assets.com/s/1275775/f/12221736.png"
+                                class="round"
+                            />
+                        </div>
+                        <div class="stars">
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">
+                            After a consultation with Revive Wellness, I felt a
+                            renewed sense of vitality. My skin improved, and I
+                            highly recommend it.
+                        </p>
+                        <p class="author">Sandy</p>
+                    </div>
+                </div>
+
+                <div class="testimonial box-shadow">
+                    <div>
+                        <div class="testimonial-img-container round box-shadow">
+                            <img
+                                src="https://cdn.store-assets.com/s/1275775/f/12221738.png"
+                                class="round"
+                            />
+                        </div>
+                        <div class="stars">
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                            <svg
+                                width="32"
+                                height="30"
+                                viewBox="0 0 32 30"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                    fill="#FFE600"
+                                />
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">
+                            Exosome therapy transformed my life. It reduced
+                            inflammation, improved my health, and the Revive
+                            Wellness team is exceptional.
+                        </p>
+                        <p class="author">Sarah</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="escape-container blank-bg">
+        <div id="therapy-faqs">
+            <h2 class="heading text-center">Frequently Asked Questions</h2>
+            <p class="subheading text-center">
+                Questions about Exosome Therapy
+            </p>
+
+            <div class="faqs">
+                <div class="faq">
+                    <h3 class="question">What is exosome therapy?</h3>
+                    <p class="body-text">
+                        Exosome therapy is a cutting-edge treatment that
+                        utilizes nano-sized particles derived from mesenchymal
+                        stem cells to stimulate healing and rejuvenation in the
+                        body.
+                    </p>
+                </div>
+
+                <div class="faq">
+                    <h3 class="question">How do exosomes work in therapy?</h3>
+                    <p class="body-text">
+                        Exosomes act as messengers, facilitating cell-to-cell
+                        communication to initiate the healing and regenerative
+                        processes in the body.
+                    </p>
+                </div>
+
+                <div class="faq">
+                    <h3 class="question">
+                        Where do the exosomes used in therapy come from?
+                    </h3>
+                    <p class="body-text">
+                        Our exosomes are extracted from donated umbilical cord
+                        tissues and then purified and characterized to ensure
+                        the highest quality and purity.
+                    </p>
+                </div>
+
+                <div class="faq">
+                    <h3 class="question">
+                        What are the benefits of exosome therapy?
+                    </h3>
+                    <p class="body-text">
+                        Exosome therapy has undergone rigorous clinical trials
+                        and has been shown to have anti-inflammatory properties,
+                        promote collagen production, stimulate the growth of new
+                        cells, and improve skin texture, among other benefits.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="final-cta">
+        <h2 class="heading text-center">
+            Have more questions or ready to begin your journey?
+        </h2>
+        <div class="content box-shadow text-center">
+            <a href="/apps/contact-form-plus">
+                <img
+                    src="https://cdn.store-assets.com/s/1275775/f/12213135.png"
+                />
+                <p class="subheading">Book Your Free Consultation Today!</p>
+                <p class="body-text">
+                    Whether you seek answers or are ready to embark on your
+                    exosome therapy journey, our team is here to assist you.
+                </p>
+            </a>
+        </div>
+    </div>
+</div>

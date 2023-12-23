@@ -1,0 +1,939 @@
+<style>
+    /* remove this */
+    .stem-cell-therapy {
+        background: #dfdddd;
+        padding: 0;
+    }
+
+    @media (min-width: 768px) {
+        .stem-cell-therapy {
+            background: #dfdddd;
+        }
+    }
+
+    .stem-cell-therapy p,
+    .stem-cell-therapy h1,
+    .stem-cell-therapy h2,
+    .stem-cell-therapy h3,
+    .stem-cell-therapy h4,
+    .stem-cell-therapy h5,
+    .stem-cell-therapy h6 {
+        padding: 0;
+        margin: 0;
+        line-height: 1;
+    }
+
+    /* Utility classes */
+    .stem-cell-therapy .text-center {
+        text-align: center;
+    }
+
+    .stem-cell-therapy .heading {
+        font-size: 3.6rem;
+        color: black;
+    }
+
+    .stem-cell-therapy .subheading {
+        font-size: 2.4rem;
+        color: #ad7b32;
+    }
+
+    .stem-cell-therapy .body-text {
+        font-weight: normal;
+        font-size: 1.8rem;
+    }
+
+    .stem-cell-therapy .escape-container {
+        width: calc(100vw - 16px);
+        position: relative;
+        left: calc(50% + 7px);
+        right: 50%;
+        margin: 0 -50vw;
+    }
+
+    .stem-cell-therapy .blank-bg {
+        background-color: #ffffff;
+    }
+
+    .stem-cell-therapy .box-shadow {
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+            0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    .stem-cell-therapy .round {
+        border-radius: 50%;
+    }
+
+    .stem-cell-therapy img {
+        object-fit: contain;
+    }
+
+    .stem-cell-therapy .cta-btn {
+        width: fit-content;
+        padding: 1rem;
+        display: inline-block;
+        color: #ffffff;
+        border: 0;
+        background: #ad7b32;
+        font-size: 2.4rem;
+        text-decoration: none;
+        border-radius: 2rem;
+    }
+
+    .stem-cell-therapy .hero .content,
+    .stem-cell-therapy .cta .content {
+        display: flex;
+    }
+
+    .stem-cell-therapy .hero .content {
+        position: relative;
+        background-image: url("https://cdn.store-assets.com/s/1275775/f/12290240.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 40rem;
+    }
+
+    .stem-cell-therapy .hero .hero-text {
+        background-image: linear-gradient(to right, #000000cc, #00000055);
+        padding-inline: 2rem;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .stem-cell-therapy .hero .heading,
+    .stem-cell-therapy .cta .heading {
+        color: #ffffff;
+    }
+
+    .stem-cell-therapy .hero .hero-text,
+    .stem-cell-therapy .cta .cta-text {
+        align-self: center;
+    }
+
+    .stem-cell-therapy .hero .subheading {
+        margin-top: 1.2rem;
+        color: #ffbf5c;
+    }
+
+    .stem-cell-therapy .hero img {
+        display: none;
+    }
+
+    .stem-cell-therapy .hero .cta-btn,
+    .stem-cell-therapy .cta .cta-btn {
+        margin-block-start: 2rem;
+    }
+
+    .stem-cell-therapy #intro iframe {
+        border-radius: 2rem;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-inline: auto;
+        margin-block: 4rem;
+        aspect-ratio: 4 / 3;
+    }
+
+    .stem-cell-therapy #intro p {
+        font-size: 2.4rem;
+        font-weight: normal;
+        color: #ad7b32;
+    }
+
+    .stem-cell-therapy #intro,
+    .stem-cell-therapy #therapy-benefits,
+    .stem-cell-therapy #therapy-faqs,
+    .stem-cell-therapy #therapy-testimonials {
+        padding: 4rem;
+    }
+
+    .stem-cell-therapy .benefits {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+    }
+
+    .stem-cell-therapy .benefit {
+        width: calc(100% - 2rem);
+        padding: 1rem;
+    }
+
+    .stem-cell-therapy .benefit > img {
+        display: block;
+        margin-inline: auto;
+        width: 100%;
+        height: 10rem;
+    }
+
+    .stem-cell-therapy .benefit h3 {
+        font-size: 3rem;
+        margin-block-start: 2.5rem;
+    }
+
+    .stem-cell-therapy .benefit .body-text {
+        margin-block-start: 2rem;
+    }
+
+    .stem-cell-therapy .cta .content {
+        position: relative;
+        background-image: url("https://cdn.store-assets.com/s/1275775/f/12290990.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 40rem;
+    }
+
+    .stem-cell-therapy .cta .content img {
+        display: none;
+    }
+
+    .stem-cell-therapy .cta .cta-text {
+        background-image: linear-gradient(to right, #000000cc, #00000055);
+        padding-inline: 2rem;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .stem-cell-therapy .cta .cta-text .subheading {
+        font-weight: 600;
+        margin-block-start: 2rem;
+        color: #ffbf5c;
+    }
+
+    .stem-cell-therapy .cta .cta-text .body-text {
+        display: none;
+    }
+
+    .stem-cell-therapy #therapy-testimonials .subheading,
+    .stem-cell-therapy #therapy-faqs .subheading {
+        margin-block-start: 2rem;
+    }
+
+    .stem-cell-therapy .testimonials {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+    }
+
+    .stem-cell-therapy .testimonial {
+        width: calc(100% - 5rem);
+        margin: 1.25rem;
+        padding: 1.25rem;
+        border-radius: 5rem;
+    }
+
+    .stem-cell-therapy .testimonial > div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stem-cell-therapy .testimonial .testimonial-img-container {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+    }
+
+    .stem-cell-therapy .testimonial img {
+        width: 20rem;
+        height: 20rem;
+        aspect-ratio: 1 / 1;
+    }
+
+    .stem-cell-therapy .testimonial .stars {
+        margin-top: 1.7rem;
+    }
+
+    .stem-cell-therapy .testimonial .testimonial-text {
+        font-size: 2.4rem;
+        font-style: italic;
+        margin-top: 1.5rem;
+    }
+
+    .stem-cell-therapy .testimonial .author {
+        color: #ad7b32;
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin-top: 2.2rem;
+    }
+
+    .stem-cell-therapy .faqs {
+        padding-block: 1.5rem;
+    }
+
+    .stem-cell-therapy .faq {
+        margin-block-start: 3rem;
+    }
+
+    .stem-cell-therapy .faq .question {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #ad7b32;
+    }
+
+    .stem-cell-therapy .faq .body-text {
+        margin-block-start: 1.2rem;
+    }
+
+    .stem-cell-therapy #final-cta {
+        padding-block: 4rem;
+    }
+
+    .stem-cell-therapy #final-cta .heading {
+        width: 75%;
+        margin-inline: auto;
+    }
+
+    .stem-cell-therapy #final-cta .content {
+        background: #ffffff;
+        width: 75%;
+        margin-inline: auto;
+        margin-block-start: 5rem;
+        border-radius: 3rem;
+    }
+
+    .stem-cell-therapy #final-cta a {
+        text-decoration: none;
+        color: initial;
+        padding-block: 2rem;
+        display: block;
+    }
+
+    .stem-cell-therapy #final-cta .content img {
+        display: block;
+        width: 75%;
+        height: auto;
+        margin: auto;
+    }
+
+    .stem-cell-therapy #final-cta .content .subheading {
+        margin-block-start: 2rem;
+        margin-block-end: 1rem;
+    }
+
+    .stem-cell-therapy #final-cta .content .body-text {
+        width: 75%;
+        margin: auto;
+    }
+
+    @media (min-width: 768px) {
+        .stem-cell-therapy .heading {
+            font-size: 4.8rem;
+        }
+
+        .stem-cell-therapy .subheading {
+            font-size: 3.6rem;
+        }
+
+        .stem-cell-therapy .body-text {
+            font-size: 2.4rem;
+        }
+
+        .stem-cell-therapy .cta-btn {
+            padding: 1.5rem 3rem;
+        }
+
+        .stem-cell-therapy #therapy-testimonials {
+            padding: 8rem 3rem;
+        }
+
+        .stem-cell-therapy .hero .content,
+        .stem-cell-therapy .cta .content {
+            background-position: center;
+            background-size: contain;
+        }
+
+        .stem-cell-therapy #intro iframe {
+            width: 80%;
+            height: 40rem;
+        }
+
+        .stem-cell-therapy #intro p {
+            font-size: 3.2rem;
+        }
+
+        .stem-cell-therapy .benefit {
+            width: calc(50% - 2rem);
+            padding: 1rem;
+        }
+
+        .stem-cell-therapy .benefit h3 {
+            font-size: 2.75rem;
+        }
+
+        .stem-cell-therapy .cta .content img {
+            width: 60rem;
+        }
+
+        .stem-cell-therapy .testimonial {
+            width: calc(33% - 5rem);
+        }
+
+        .stem-cell-therapy .testimonial .testimonial-img-container {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        .stem-cell-therapy .testimonial img {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        .stem-cell-therapy .faq .question {
+            font-size: 3.6rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .stem-cell-therapy #intro,
+        .stem-cell-therapy #therapy-benefits,
+        .stem-cell-therapy #therapy-faqs {
+            padding: 8rem 20rem;
+        }
+
+        .stem-cell-therapy #therapy-testimonials {
+            padding: 8rem 10rem;
+        }
+
+        .stem-cell-therapy .benefit {
+            width: calc(25% - 2rem);
+            padding: 1rem;
+        }
+
+        .stem-cell-therapy .hero .content,
+        .stem-cell-therapy .cta .content {
+            position: relative;
+            background: none;
+        }
+
+        .stem-cell-therapy .hero .hero-text,
+        .stem-cell-therapy .cta .cta-text {
+            background: none;
+            position: static;
+        }
+
+        .stem-cell-therapy .hero .heading,
+        .stem-cell-therapy .cta .heading {
+            color: #000000;
+        }
+
+        .stem-cell-therapy .hero .hero-text .subheading,
+        .stem-cell-therapy .cta .cta-text .subheading {
+            color: #ad7b32;
+        }
+
+        .stem-cell-therapy .hero .content img {
+            display: block;
+            position: static;
+            width: 50%;
+            height: auto;
+        }
+
+        .stem-cell-therapy .cta .content img {
+            display: block;
+            width: 50%;
+            height: auto;
+        }
+
+        .stem-cell-therapy .cta .cta-text .body-text {
+            display: block;
+            margin-block-start: 2rem;
+        }
+
+        .stem-cell-therapy #final-cta .content {
+            width: 50%;
+        }
+    }
+</style>
+
+<head>
+    <link rel="stylesheet" href="styles/easystore.css" />
+</head>
+
+<body>
+    <div class="stem-cell-therapy">
+        <div class="hero">
+            <div class="content">
+                <div class="hero-text">
+                    <h1 class="heading">
+                        Stem Cell Therapy Best Anti-Aging Solution in Malaysia
+                    </h1>
+                    <p class="subheading">Dive in and discover more below</p>
+                    <a
+                        href="/apps/contact-form-plus"
+                        class="cta-btn box-shadow"
+                    >
+                        Get a free consultation
+                    </a>
+                </div>
+                <img
+                    src="https://cdn.store-assets.com/s/1275775/f/12290240.png"
+                />
+            </div>
+        </div>
+
+        <div class="escape-container blank-bg">
+            <div id="intro">
+                <h2 class="heading text-center">
+                    What is Stem Cell Therapy? Unlocking Healing Potential
+                </h2>
+                <iframe
+                    width="1519"
+                    height="526"
+                    src="https://www.youtube.com/embed/B9oJfL8e1F0"
+                    title="Stem Cell Therapy | Best Anti-Aging Solution in Malaysia"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                ></iframe>
+                <p class="text-center">
+                    Discover the future of healthcare in this video as we delve
+                    into the incredible world of stem cell therapy. Learn how
+                    stem cells can naturally heal and regenerate tissues,
+                    offering hope for various health conditions.
+                </p>
+            </div>
+        </div>
+
+        <div class="escape-container blank-bg">
+            <div id="therapy-benefits">
+                <h2 class="heading text-center">
+                    Benefits of Stem Cell Therapy
+                </h2>
+                <div class="benefits">
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12290323.png"
+                        />
+                        <div class="text-center">
+                            <h3>Healing Power</h3>
+                            <p class="body-text">Stem cells repair tissues</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12212978.png"
+                        />
+                        <div class="text-center">
+                            <h3>Less Inflammation</h3>
+                            <p class="body-text">Reduces swelling</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12290350.png"
+                        />
+                        <div class="text-center">
+                            <h3>Quick Recovery</h3>
+                            <p class="body-text">Speeds up healing</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12212978.png"
+                        />
+                        <div class="text-center">
+                            <h3>Better Health</h3>
+                            <p class="body-text">Enhances overall well-being</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12290347.png"
+                        />
+                        <div class="text-center">
+                            <h3>Natural Healing</h3>
+                            <p class="body-text">
+                                Uses the body's own healing ability
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12290351.png"
+                        />
+                        <div class="text-center">
+                            <h3>Versatile Treatment</h3>
+                            <p class="body-text">
+                                Works for various conditions
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12290348.png"
+                        />
+                        <div class="text-center">
+                            <h3>Pain Relief</h3>
+                            <p class="body-text">Eases discomfort</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <img
+                            src="https://cdn.store-assets.com/s/1275775/f/12290349.png"
+                        />
+                        <div class="text-center">
+                            <h3>Gentle Approach</h3>
+                            <p class="body-text">
+                                Less invasive, quicker recovery
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <div class="content">
+                <img
+                    src="https://cdn.store-assets.com/s/1275775/f/12290990.png"
+                />
+                <div class="cta-text">
+                    <h2 class="heading">
+                        Ready to Experience the Benefits for Yourself
+                    </h2>
+                    <p class="subheading">Book Your Free Consultation Now!</p>
+                    <p class="body-text">
+                        Our team is eager to guide you on your journey to
+                        renewed vitality and well-being.
+                    </p>
+                    <a
+                        href="/apps/contact-form-plus"
+                        class="cta-btn box-shadow"
+                    >
+                        BOOK NOW
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="escape-container blank-bg">
+            <div id="therapy-testimonials" class="text-center">
+                <h2 class="heading">Testimonials</h2>
+                <p class="subheading">What other people are saying</p>
+                <div class="testimonials">
+                    <div class="testimonial box-shadow">
+                        <div>
+                            <div
+                                class="testimonial-img-container round box-shadow"
+                            >
+                                <img
+                                    src="https://cdn.store-assets.com/s/1275775/f/12291066.png"
+                                    class="round"
+                                />
+                            </div>
+                            <div class="stars">
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                            </div>
+                            <p class="testimonial-text">
+                                Stem cell therapy surpassed my expectations,
+                                healing my knee injury quickly. Their expertise
+                                and natural approach amazed me.
+                            </p>
+                            <p class="author">Claris</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial box-shadow">
+                        <div>
+                            <div
+                                class="testimonial-img-container round box-shadow"
+                            >
+                                <img
+                                    src="https://cdn.store-assets.com/s/1275775/f/12291107.png"
+                                    class="round"
+                                />
+                            </div>
+                            <div class="stars">
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                            </div>
+                            <p class="testimonial-text">
+                                Life-changing! Stem cell therapy at Revive
+                                Wellness relieved my chronic pain. The team's
+                                dedication was incredible.
+                            </p>
+                            <p class="author">Miki</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial box-shadow">
+                        <div>
+                            <div
+                                class="testimonial-img-container round box-shadow"
+                            >
+                                <img
+                                    src="https://cdn.store-assets.com/s/1275775/f/12291017.png"
+                                    class="round"
+                                />
+                            </div>
+                            <div class="stars">
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                                <svg
+                                    width="32"
+                                    height="30"
+                                    viewBox="0 0 32 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.1316 0.15332L19.8095 11.4727H31.7114L22.0825 18.4685L25.7604 29.7879L16.1316 22.7921L6.50273 29.7879L10.1806 18.4685L0.551771 11.4727H12.4537L16.1316 0.15332Z"
+                                        fill="#FFE600"
+                                    />
+                                </svg>
+                            </div>
+                            <p class="testimonial-text">
+                                Revive Wellness's stem cell therapy transformed
+                                my life, easing arthritis pain and improving
+                                joint function.
+                            </p>
+                            <p class="author">May</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="escape-container blank-bg">
+            <div id="therapy-faqs">
+                <h2 class="heading text-center">Frequently Asked Questions</h2>
+                <p class="subheading text-center">
+                    Questions about Stem Cell Therapy
+                </p>
+
+                <div class="faqs">
+                    <div class="faq">
+                        <h3 class="question">What is stem cell therapy?</h3>
+                        <p class="body-text">
+                            Stem cell therapy repairs damaged tissues using
+                            specialized cells with the potential to develop into
+                            various types.
+                        </p>
+                    </div>
+
+                    <div class="faq">
+                        <h3 class="question">
+                            How do stem cell work in therapy?
+                        </h3>
+                        <p class="body-text">
+                            Stem cells, introduced into the body, differentiate
+                            into various cells, promoting tissue repair.
+                        </p>
+                    </div>
+
+                    <div class="faq">
+                        <h3 class="question">
+                            Where do the stem cells used in therapy come from?
+                        </h3>
+                        <p class="body-text">
+                            Our stem cells come from ethical sources like
+                            Wharton's jelly in donated umbilical cords.
+                        </p>
+                    </div>
+
+                    <div class="faq">
+                        <h3 class="question">
+                            What conditions can stem cell therapy treat?
+                        </h3>
+                        <p class="body-text">
+                            Stem cell therapy explores treating various issues,
+                            from orthopedic to neurological disorders.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="final-cta">
+            <h2 class="heading text-center">
+                Have more questions or ready to begin your journey?
+            </h2>
+            <div class="content box-shadow text-center">
+                <a href="/apps/contact-form-plus">
+                    <img
+                        src="https://cdn.store-assets.com/s/1275775/f/12213135.png"
+                    />
+                    <p class="subheading">Book Your Free Consultation Today!</p>
+                    <p class="body-text">
+                        Whether you seek answers or are ready to embark on your
+                        exosome therapy journey, our team is here to assist you.
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
